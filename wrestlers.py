@@ -59,8 +59,16 @@ def check_rivalries(V, Adj):
     babyfaces = list(dict.fromkeys(babyfaces))    #removes duplicates
     heels = list(dict.fromkeys(heels))              #removes duplicates
     print("Yes, it's possible.")
-    print("Babyfaces: ", babyfaces)
-    print("Heels: ", heels)
+    out_baby = "Babyfaces: "
+    out_heels = "Heels: "
+    for b in babyfaces:
+        out_baby += str(b)
+        out_baby += " "
+    for h in heels:
+        out_heels += str(h)
+        out_heels += " "
+    print(out_baby)
+    print(out_heels)
     return
 
 check_rivalries(V, Adj)
