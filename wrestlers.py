@@ -16,10 +16,6 @@ with open(sys.argv[1], 'r') as infile:
         tuple = (rivals[0], rivals[1])
         E.append(tuple)
 
-print("number of wrestlers = ", n)
-print("wrestlers are ", V)
-print("number of rivalries are ", r)
-print("rivalries are ", E)
 
 
 # Build Adjacency List as a dictionary
@@ -31,8 +27,6 @@ for x in range(0, len(V)):
             Adj[V[x]].append(E[y][1])
         if E[y][1] == V[x]:
             Adj[V[x]].append(E[y][0])
-
-print("Adjacency List is ", Adj)
 
 #Traverse through the Graph with modified BFS
 def check_rivalries(V, Adj):
@@ -47,12 +41,9 @@ def check_rivalries(V, Adj):
         processing.append(v)
         if v not in babyfaces and v not in heels:
             babyfaces.append(v)
-        #print("current wrestler starting point = ", v)
         while len(Q) > 0:
             u = Q.pop(0)
-            #print(u)
             for z in Adj[u]:
-                #print(u, " is connected to ", z)
                 if z not in visited and z not in processing:
                     processing.append(z)
                     Q.append(z)
@@ -61,11 +52,7 @@ def check_rivalries(V, Adj):
                 if u in heels:
                     babyfaces.append(z)
             processing.remove(u)
-            #print(processing)
             visited.append(u)
-            #print("we have visited ", visited)
-            #print("babyfaces: ", babyfaces)
-            #print("heels: ", heels)
             if u in babyfaces and u in heels:
                 print("Impossible")
                 return
