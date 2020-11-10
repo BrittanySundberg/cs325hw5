@@ -7,6 +7,8 @@ rivalries r and rivalries listed in pairs.
  
 To run the files there on the flip3 servers, you need to go to that cs325hw5 folder. Then:
 
+The python file that has the code and algorithm to run is named wrestlers.py
+
 To run wrestlers.py on the engineering flip servers, run the command line "python3 activity.py [fileName].txt" 
 and REPLACE "[fileName]" with the name of the text file that has the input data you want to run the algorithm/python file on.
 That txt file needs to be in the same folder as the python file, so if you want to run it on your own txt file of data, you
