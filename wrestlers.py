@@ -1,6 +1,8 @@
 # CS 325 Fall 2020 HW 5
 # Brittany Sundberg
 
+import sys
+
 with open(sys.argv[1], 'r') as infile:
     n = int(infile.readline().strip())
     V = []
